@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mono to Spatial Audio Demo</title>
+    <meta property="og:title" content="Mono to Spatial Audio Demo">
+    <meta property="og:type" content="article">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <!-- 标题 -->
+        <h1 class="title">Mono to Spatial Audio Demo</h1>
+        
+        <!-- 作者信息（可选） -->
+        <div class="authors">
+            <span>Author 1<sup>1</sup></span>
+            <span>Author 2<sup>1</sup></span>
+            <span>Author 3<sup>2</sup></span>
+        </div>
+        
+        <div class="affiliations">
+            <p><sup>1</sup>University A &nbsp;&nbsp; <sup>2</sup>University B</p>
+        </div>
+
+        <!-- 链接按钮 -->
+        <div class="links">
+            <a href="#" class="btn">📄 Paper</a>
+            <a href="#" class="btn">💻 Code</a>
+            <a href="#" class="btn">📊 Dataset</a>
+        </div>
+
+        <hr>
+
+        <!-- 摘要 -->
+        <h2>Abstract</h2>
+        <div class="abs">
+            <p>
+                在这里填写你的论文摘要。描述你的方法如何将单通道（Mono）音频结合DOA（Direction of Arrival）
+                信息转换为双耳空间音频（Binaural Audio）。介绍你的主要贡献和实验结果。
+            </p>
+        </div>
+
+        <hr>
+
+        <!-- 模型图 -->
+        <h2>Model Overview</h2>
+        <div class="fig-model">
+            <img src="images/model_overview.png" alt="Model Architecture">
+        </div>
+        <p class="caption">图1: 模型架构概述。在这里添加对模型的简要说明。</p>
+
+        <hr>
+
+        <!-- 音频样本展示 -->
+        <h2>Audio Samples</h2>
+        <p class="instruction">🎧 请使用耳机收听以获得最佳双耳音频体验</p>
+
+        <!-- 数据集1 -->
+        <h3 id="dataset1">Dataset 1</h3>
+        <div class="table-container">
+            <table class="sample-table">
+                <thead>
+                    <tr>
+                        <th>Mono</th>
+                        <th>BinauralZero</th>
+                        <th>WarpNet</th>
+                        <th>BinauralGrad</th>
+                        <th>NFS</th>
+                        <th>Ground Truth</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample 1 -->
+                    <tr class="audio">
+                        <td><audio controls><source src="Mono/sample1.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="BinauralZero/sample1.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="WarpNet/sample1.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="BinauralGrad/sample1.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="NFS/sample1.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="GroundTruth/sample1.wav" type="audio/wav"></audio></td>
+                    </tr>
+                    <!-- Sample 2 -->
+                    <tr class="audio">
+                        <td><audio controls><source src="Mono/sample2.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="BinauralZero/sample2.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="WarpNet/sample2.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="BinauralGrad/sample2.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="NFS/sample2.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="GroundTruth/sample2.wav" type="audio/wav"></audio></td>
+                    </tr>
+                    <!-- Sample 3 -->
+                    <tr class="audio">
+                        <td><audio controls><source src="Mono/sample3.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="BinauralZero/sample3.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="WarpNet/sample3.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="BinauralGrad/sample3.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="NFS/sample3.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="GroundTruth/sample3.wav" type="audio/wav"></audio></td>
+                    </tr>
+                    <!-- 添加更多样本... -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 数据集2（可选） -->
+        <h3 id="dataset2">Dataset 2</h3>
+        <div class="table-container">
+            <table class="sample-table">
+                <thead>
+                    <tr>
+                        <th>Mono</th>
+                        <th>BinauralZero</th>
+                        <th>WarpNet</th>
+                        <th>BinauralGrad</th>
+                        <th>NFS</th>
+                        <th>Ground Truth</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample 1 -->
+                    <tr class="audio">
+                        <td><audio controls><source src="Mono/sample4.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="BinauralZero/sample4.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="WarpNet/sample4.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="BinauralGrad/sample4.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="NFS/sample4.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="GroundTruth/sample4.wav" type="audio/wav"></audio></td>
+                    </tr>
+                    <!-- 添加更多样本... -->
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <!-- BibTeX 引用 -->
+        <h2>Citation</h2>
+        <div class="bibtex">
+            <pre><code>@article{yourname2024mono,
+    title={Your Paper Title},
+    author={Author1 and Author2 and Author3},
+    journal={arXiv preprint arXiv:xxxx.xxxxx},
+    year={2024}
+}</code></pre>
+        </div>
+
+        <!-- 致谢 -->
+        <h2>Acknowledgements</h2>
+        <div class="abs">
+            <p>在这里添加致谢信息。</p>
+        </div>
+
+        <!-- 页脚 -->
+        <footer>
+            <p>© 2024 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
