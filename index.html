@@ -44,8 +44,18 @@
         <h2>Abstract</h2>
         <div class="abs">
             <p>
-                在这里填写你的论文摘要。描述你的方法如何将单通道（Mono）音频结合DOA（Direction of Arrival）
-                信息转换为双耳空间音频（Binaural Audio）。介绍你的主要贡献和实验结果。
+                We propose a novel neural codec-based framework for mono-to-binaural speech synthesis that 
+                disentangles and separately models spatial, acoustic, and semantic information. Our approach 
+                employs a multi-branch architecture with three parallel encoding-decoding pathways: (1) a 
+                <strong>Spatial Branch</strong> that captures interaural time and level differences (ITD/ILD) 
+                from the binaural spatial cues, (2) an <strong>Acoustic Branch</strong> that processes the 
+                monaural speech signal and generates left/right ear outputs through sum-and-difference decoding, 
+                and (3) a <strong>Semantic Branch</strong> that leverages frozen HuBERT features to preserve 
+                speech content. Each branch utilizes Residual Vector Quantization (RVQ-4) operating at 25Hz 
+                to obtain discrete representations, which are then concatenated and jointly decoded. The model 
+                is trained with spatial, acoustic, and semantic reconstruction losses to ensure high-fidelity 
+                binaural audio synthesis. Experimental results demonstrate that our method achieves 
+                state-of-the-art performance on both in-domain and out-of-domain datasets.
             </p>
         </div>
 
@@ -56,7 +66,11 @@
         <div class="fig-model">
             <img src="images/model_overview.png" alt="Model Architecture">
         </div>
-        <p class="caption">图1: 模型架构概述。在这里添加对模型的简要说明。</p>
+        <p class="caption">Figure 1: Overview of the proposed framework. The model consists of three branches: 
+            Spatial Branch (top, blue) for encoding spatial cues, Acoustic Branch (middle, cyan) for 
+            processing monaural audio and generating binaural outputs, and Semantic Branch (bottom, yellow) 
+            for preserving speech content using HuBERT features. All branches employ RVQ-4 for discrete 
+            representation learning.</p>
 
         <hr>
 
